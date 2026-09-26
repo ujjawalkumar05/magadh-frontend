@@ -1019,39 +1019,44 @@
 
 
 /* =========================================================
-   CURRENT LOCATION
+   CURRENT LOCATION  (Flipkart-inspired, premium gold/green)
    ========================================================= */
 
 .current-location-button {
   width: 100%;
 
-  min-height: 58px;
+  min-height: 62px;
 
   display: flex;
 
   align-items: center;
 
-  gap: 12px;
+  gap: 14px;
 
-  padding: 13px 16px;
+  padding: 14px 20px;
 
-  border: 1px solid rgba(39, 92, 61, 0.20);
+  border: 1.5px solid rgba(39, 92, 61, 0.22);
 
-  border-radius: 14px;
+  border-radius: 16px;
 
   background:
     linear-gradient(
       135deg,
-      #f5faf6,
-      #eef6f0
+      #f7fbf7,
+      #edf5ef
     );
 
   color: #1e5738;
 
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 800;
 
+  letter-spacing: 0.2px;
+
   cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(25, 60, 42, 0.06);
 
   transition: all 0.25s ease;
 
@@ -1061,7 +1066,10 @@
 .current-location-button:hover {
   border-color: #2c7048;
 
-  background: #e9f3ec;
+  background: linear-gradient(135deg, #eef8f1, #e3f1e7);
+
+  box-shadow:
+    0 12px 26px rgba(25, 60, 42, 0.10);
 
   transform: translateY(-1px);
 }
@@ -1075,22 +1083,22 @@
 }
 
 .location-pin {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
-  background: #fff;
+  background: #193c2a;
 
-  color: #27643f;
+  color: #f1ce70;
 
   box-shadow:
-    0 3px 10px rgba(20, 60, 38, 0.07);
+    0 4px 12px rgba(20, 60, 38, 0.18);
 
   flex-shrink: 0;
 }
@@ -1103,21 +1111,27 @@
   color: #b08a37;
 
   flex-shrink: 0;
+
+  transition: transform 0.2s ease;
+}
+
+.current-location-button:hover .location-arrow {
+  transform: translateX(3px);
 }
 
 .location-helper {
-  margin: 9px 3px 24px;
+  margin: 10px 3px 26px;
 
   color: #949990;
 
-  font-size: 11px;
+  font-size: 11.5px;
 
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 
 /* =========================================================
-   FORM
+   FORM  (Flipkart-inspired, premium gold/green)
    ========================================================= */
 
 .form-grid {
@@ -1125,7 +1139,7 @@
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 19px 17px;
+  gap: 20px 18px;
 
   min-width: 0;
 }
@@ -1143,12 +1157,14 @@
 }
 
 .form-group label {
-  margin-bottom: 8px;
+  margin-bottom: 9px;
 
-  color: #303b33;
+  color: #22301f;
 
   font-size: 12px;
-  font-weight: 750;
+  font-weight: 800;
+
+  letter-spacing: 0.3px;
 
   overflow-wrap: anywhere;
 }
@@ -1175,21 +1191,24 @@
   max-width: 100%;
   min-width: 0;
 
-  border: 1px solid #dedfd9;
+  border: 1.5px solid #dfe4dc;
 
-  background: #fcfcfa;
+  background: #fcfdfb;
 
-  border-radius: 12px;
+  border-radius: 13px;
 
-  padding: 14px 15px;
+  padding: 14px 16px;
 
   outline: none;
 
-  color: #233129;
+  color: #1c2a20;
 
   font-family: inherit;
 
-  font-size: 13px;
+  font-size: 13.5px;
+
+  box-shadow:
+    inset 0 1px 2px rgba(24, 37, 29, 0.03);
 
   transition:
     border-color 0.2s ease,
@@ -1198,28 +1217,33 @@
 }
 
 .form-group input {
-  height: 49px;
+  height: 52px;
 }
 
 .form-group textarea {
   resize: vertical;
 
-  min-height: 88px;
+  min-height: 92px;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #c7d2c6;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #b0b3ae;
+  color: #adb1a9;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #8a9f90;
+  border-color: #2c7048;
 
   background: #fff;
 
   box-shadow:
-    0 0 0 4px rgba(44, 99, 65, 0.07);
+    0 0 0 4px rgba(44, 112, 72, 0.10);
 }
 
 
@@ -1228,19 +1252,21 @@
    ========================================================= */
 
 .checkout-form-error {
-  margin-top: 20px;
+  margin-top: 22px;
 
-  padding: 13px 15px;
+  padding: 14px 16px;
 
-  border-radius: 11px;
+  border-radius: 13px;
 
   background: #fff3f1;
 
-  border: 1px solid #f1d0ca;
+  border: 1.5px solid #f1d0ca;
 
   color: #a43d32;
 
   font-size: 12px;
+
+  font-weight: 600;
 
   line-height: 1.5;
 
@@ -1249,25 +1275,25 @@
 
 
 /* =========================================================
-   CONTINUE BUTTON
+   CONTINUE BUTTON  (Flipkart-inspired premium CTA)
    ========================================================= */
 
 .continue-payment-button {
   width: 100%;
 
-  height: 57px;
+  height: 58px;
 
-  margin-top: 25px;
+  margin-top: 26px;
 
   border: none;
 
-  border-radius: 13px;
+  border-radius: 14px;
 
   background:
     linear-gradient(
       100deg,
       #193f2b,
-      #275e3d
+      #2c7048
     );
 
   color: #fff;
@@ -1277,24 +1303,26 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 20px 0 23px;
+  padding: 0 22px 0 24px;
 
   cursor: pointer;
 
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 800;
 
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
 
   box-shadow:
-    0 10px 22px rgba(25, 63, 43, 0.17);
+    0 12px 26px rgba(25, 63, 43, 0.22);
 
   transition: all 0.25s ease;
 }
 
 .continue-payment-button strong {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
 
   display: flex;
 
@@ -1303,18 +1331,24 @@
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.15);
 
   font-size: 18px;
 
   flex-shrink: 0;
+
+  transition: transform 0.2s ease;
 }
 
 .continue-payment-button:hover {
   transform: translateY(-2px);
 
   box-shadow:
-    0 14px 28px rgba(25, 63, 43, 0.22);
+    0 16px 32px rgba(25, 63, 43, 0.28);
+}
+
+.continue-payment-button:hover strong {
+  transform: translateX(3px);
 }
 
 .continue-payment-button:disabled {
@@ -1323,6 +1357,9 @@
   cursor: not-allowed;
 
   transform: none;
+
+  box-shadow:
+    0 12px 26px rgba(25, 63, 43, 0.22);
 }
 
 
@@ -2212,24 +2249,28 @@
      ===================================================== */
 
   .current-location-button {
-    min-height: 54px;
+    min-height: 56px;
 
-    padding: 10px 12px;
+    padding: 12px 14px;
 
-    border-radius: 13px;
+    border-radius: 14px;
 
-    font-size: 11px;
+    gap: 12px;
+
+    font-size: 12px;
   }
 
   .location-pin {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
   }
 
   .location-helper {
-    font-size: 9px;
+    font-size: 10px;
 
-    margin-bottom: 20px;
+    margin: 8px 2px 20px;
   }
 
 
@@ -2240,7 +2281,7 @@
   .form-grid {
     grid-template-columns: 1fr;
 
-    gap: 15px;
+    gap: 16px;
   }
 
   .form-group.full-width {
@@ -2248,20 +2289,22 @@
   }
 
   .form-group label {
-    font-size: 11px;
+    font-size: 11.5px;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
   }
 
   .form-group input {
-    height: 48px;
+    height: 50px;
   }
 
   .form-group input,
   .form-group textarea {
-    font-size: 12px;
+    font-size: 13px;
 
-    border-radius: 11px;
+    border-radius: 12px;
+
+    padding: 13px 14px;
   }
 
 
@@ -2270,13 +2313,22 @@
      ===================================================== */
 
   .continue-payment-button {
-    height: 54px;
+    height: 55px;
 
-    margin-top: 20px;
+    margin-top: 22px;
 
-    border-radius: 12px;
+    border-radius: 13px;
 
-    font-size: 10px;
+    padding: 0 18px 0 20px;
+
+    font-size: 11px;
+  }
+
+  .continue-payment-button strong {
+    width: 32px;
+    height: 32px;
+
+    font-size: 16px;
   }
 
 
@@ -2450,6 +2502,15 @@
     height: 21px;
 
     font-size: 11px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 13px;
+  }
+
+  .continue-payment-button {
+    padding: 0 15px;
   }
 
 }
