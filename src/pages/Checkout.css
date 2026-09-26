@@ -1191,7 +1191,7 @@
   max-width: 100%;
   min-width: 0;
 
-  border: 1.5px solid #dfe4dc;
+  border: 1.5px solid #b9c5b8;
 
   background: #fcfdfb;
 
@@ -1228,7 +1228,7 @@
 
 .form-group input:hover,
 .form-group textarea:hover {
-  border-color: #c7d2c6;
+  border-color: #93a693;
 }
 
 .form-group input::placeholder,
