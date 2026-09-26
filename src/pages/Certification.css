@@ -1,0 +1,2028 @@
+/* =========================================================
+   MAGADH ORG — CERTIFICATION PAGE
+   PREMIUM CREAM / GOLD / DOCUMENT STYLE
+========================================================= */
+
+.certification-page {
+  min-height: 100vh;
+  background: #f7f1e5;
+  color: #17120d;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.certification-navbar {
+  height: 80px;
+  background: rgba(255, 253, 249, 0.98);
+  border-top: 2px solid #b68124;
+  border-bottom: 1px solid #e5dac6;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4.2%;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.certification-brand {
+  border: 0;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+  color: #17120d;
+}
+
+.certification-brand-mark {
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid #b98a3b;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Georgia, serif;
+  font-size: 22px;
+
+  color: #805812;
+}
+
+.certification-brand-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.certification-brand-info strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+}
+
+.certification-brand-info small {
+  margin-top: 5px;
+
+  color: #8a6b39;
+
+  font-size: 7px;
+  letter-spacing: 1.8px;
+}
+
+.certification-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.certification-nav button {
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #5d554c;
+
+  font-size: 14px;
+
+  padding: 29px 0 25px;
+
+  position: relative;
+}
+
+.certification-nav button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 17px;
+
+  height: 2px;
+
+  background: #a87518;
+
+  transform: scaleX(0);
+
+  transition: transform 0.25s ease;
+}
+
+.certification-nav button:hover::after,
+.certification-nav button.active::after {
+  transform: scaleX(1);
+}
+
+.certification-nav button.active {
+  color: #8a5e13;
+}
+
+.certification-back {
+  border: 1px solid #d5c2a2;
+
+  background: #fffdf9;
+
+  border-radius: 28px;
+
+  padding: 12px 22px;
+
+  color: #775315;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.certification-back:hover {
+  background: #f7efdf;
+  transform: translateX(-2px);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.certification-hero {
+  min-height: 330px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(222, 185, 110, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf8 0%,
+      #f8f0df 100%
+    );
+
+  border-bottom: 1px solid #e2d3bb;
+}
+
+.certification-hero-content {
+  width: min(1100px, 90%);
+
+  text-align: center;
+
+  padding: 48px 20px 36px;
+
+  z-index: 2;
+}
+
+.certification-kicker,
+.certification-section-label {
+  display: block;
+
+  color: #8a611c;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+.certification-hero h1 {
+  margin: 17px 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 6vw, 76px);
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.certification-hero h1 span {
+  color: #ad7619;
+}
+
+.certification-hero-content > p {
+  max-width: 850px;
+
+  margin: 20px auto 0;
+
+  color: #615a51;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HERO PILLARS
+========================================================= */
+
+.certification-pillars {
+  margin: 30px auto 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 70px;
+}
+
+.certification-pillar {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-align: left;
+}
+
+.pillar-icon {
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid #b88937;
+
+  border-radius: 50%;
+
+  color: #936516;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Georgia, serif;
+
+  font-size: 21px;
+
+  background: rgba(255, 252, 244, 0.8);
+}
+
+.certification-pillar div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.certification-pillar strong,
+.certification-pillar span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.certification-pillar strong {
+  color: #4d3a20;
+}
+
+.certification-pillar span {
+  margin-top: 4px;
+
+  color: #9a7950;
+}
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.certification-hero-decoration {
+  position: absolute;
+
+  color: rgba(174, 135, 70, 0.14);
+}
+
+.certification-hero-decoration.left {
+  left: 4%;
+  bottom: 20px;
+
+  font-size: 90px;
+
+  transform: rotate(-12deg);
+}
+
+.certification-hero-decoration.left span {
+  display: block;
+
+  line-height: 0.45;
+}
+
+.certification-hero-decoration.right {
+  right: 5%;
+  top: 35px;
+}
+
+.trust-seal {
+  width: 145px;
+  height: 145px;
+
+  border: 2px solid rgba(171, 132, 64, 0.16);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(-12deg);
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: rgba(122, 87, 34, 0.25);
+}
+
+.trust-seal strong {
+  font-size: 30px;
+
+  margin: 7px 0;
+}
+
+/* =========================================================
+   RECORDS
+========================================================= */
+
+.certification-records {
+  padding: 72px 3.2% 86px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(224, 193, 137, 0.18),
+      transparent 55%
+    ),
+    #f1e6d0;
+}
+
+.certification-records-header {
+  width: min(1250px, 94%);
+
+  margin: 0 auto 40px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.certification-records-header h2 {
+  margin: 17px 0 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -2px;
+}
+
+.certification-records-header h2 span {
+  color: #ae781c;
+}
+
+.certification-records-header > p {
+  width: 260px;
+
+  color: #71695f;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  text-align: right;
+
+  margin-bottom: 5px;
+}
+
+/* =========================================================
+   GRID
+   DESKTOP  = 5 PDF PER ROW
+   TABLET   = 3 PDF PER ROW
+   MOBILE   = 1 PDF PER ROW
+========================================================= */
+
+.certification-grid {
+  width: min(1500px, 96%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.certificate-card {
+  position: relative;
+
+  background: #fffdfa;
+
+  border: 1px solid #e4d8c5;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 30px rgba(71, 48, 20, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 40px rgba(71, 48, 20, 0.14);
+}
+
+/* =========================================================
+   PDF PREVIEW
+========================================================= */
+
+.certificate-preview {
+  height: 200px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #eee7da;
+
+  border-bottom: 1px solid #e1d5c3;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.certificate-real-preview {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: 0;
+
+  background: #ffffff;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.certificate-preview-empty {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #9b8a70;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffdfa,
+      #f3eadb
+    );
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   PREVIEW OVERLAY
+========================================================= */
+
+.preview-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 85px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  padding-bottom: 12px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(20, 15, 8, 0.25),
+      transparent
+    );
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.preview-overlay span {
+  padding: 6px 10px;
+
+  background: rgba(255, 253, 248, 0.94);
+
+  border: 1px solid #ddcba9;
+
+  border-radius: 5px;
+
+  color: #765014;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   PDF BADGE
+========================================================= */
+
+.pdf-badge {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #d92e28;
+
+  color: white;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 7px 16px rgba(100, 20, 15, 0.3);
+
+  transform: rotate(-4deg);
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
+.pdf-badge strong {
+  font-size: 11px;
+
+  line-height: 1;
+
+  letter-spacing: 1px;
+}
+
+.pdf-file-icon {
+  font-size: 14px;
+
+  line-height: 1;
+
+  margin-bottom: 2px;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.certificate-card-content {
+  padding: 22px 24px 18px;
+
+  text-align: center;
+}
+
+.certificate-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 7px 10px;
+
+  border: 1px solid #eadfc9;
+
+  border-radius: 7px;
+
+  background: #fbf6ea;
+
+  color: #89621e;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+.status-shield {
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #a97925;
+
+  border-radius: 50%;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+}
+
+.certificate-card-content h3 {
+  margin: 17px 0 9px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #211b15;
+}
+
+.certificate-card-content p {
+  margin: 0;
+
+  color: #756b60;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  min-height: 63px;
+}
+
+/* =========================================================
+   META
+========================================================= */
+
+.certificate-meta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin: 0 24px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid #e9dfcf;
+
+  border-bottom: 1px solid #e9dfcf;
+
+  color: #756c62;
+
+  font-size: 11px;
+}
+
+.certificate-meta span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+}
+
+.certificate-meta b {
+  color: #8e661f;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.certificate-card-footer {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.9fr;
+
+  gap: 9px;
+
+  padding: 17px 24px 18px;
+}
+
+.view-certificate-button,
+
+
+.view-certificate-button {
+  border: 1px solid #a56f13;
+
+  background: #a36e10;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.view-certificate-button:hover {
+  background: #875a0c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(130, 87, 12, 0.2);
+}
+
+.eye-icon {
+  font-size: 14px;
+}
+
+.arrow {
+  font-size: 15px;
+}
+
+.download-certificate-button {
+  border: 1px solid #b5822a;
+
+  background: #fffdf8;
+
+  color: #805913;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+}
+
+.download-certificate-button:hover {
+  background: #f7eddb;
+
+  transform: translateY(-1px);
+}
+
+.download-certificate-button span {
+  font-size: 18px;
+}
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.certificate-delete {
+  width: calc(100% - 48px);
+
+  min-height: 40px;
+
+  margin: 0 24px 22px;
+
+  border: 1px solid #d7a39a;
+
+  border-radius: 7px;
+
+  background: #fff8f6;
+
+  color: #a33a2e;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.certificate-delete:hover {
+  background: #a33a2e;
+
+  color: white;
+
+  border-color: #a33a2e;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   LOADING / EMPTY
+========================================================= */
+
+.certification-loading,
+.certification-empty {
+  width: min(900px, 90%);
+
+  margin: 40px auto 0;
+
+  padding: 55px 30px;
+
+  text-align: center;
+
+  background: #fffdfa;
+
+  border: 1px solid #e2d5c0;
+
+  border-radius: 14px;
+}
+
+.certification-empty-icon {
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid #caa665;
+
+  border-radius: 50%;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #956719;
+}
+
+.certification-empty h3 {
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+
+  margin: 0 0 8px;
+}
+
+.certification-empty p {
+  color: #786f64;
+
+  margin: 0;
+}
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+.certification-admin {
+  padding: 90px 5%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf9,
+      #f8f0e2
+    );
+}
+
+.certification-admin-inner {
+  width: min(830px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.certification-admin-inner h2 {
+  margin: 14px 0;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(43px, 5vw, 66px);
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+.certification-admin-inner h2 span {
+  color: #aa751b;
+}
+
+.certification-admin-inner > p {
+  color: #746b60;
+
+  font-size: 14px;
+}
+
+.certificate-upload-form {
+  margin-top: 35px;
+
+  padding: 38px;
+
+  background: #f6eee0;
+
+  border: 1px solid #dfcfb5;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 35px rgba(74, 51, 21, 0.08);
+}
+
+.certificate-form-field {
+  margin-bottom: 26px;
+
+  text-align: left;
+}
+
+.certificate-form-field label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #6d552f;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.certificate-form-field input,
+.certificate-form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dccbb0;
+
+  border-radius: 8px;
+
+  background: #fffdfa;
+
+  color: #2b241d;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+}
+
+.certificate-form-field input {
+  height: 54px;
+
+  padding: 0 15px;
+}
+
+.certificate-form-field textarea {
+  padding: 15px;
+
+  resize: vertical;
+}
+
+.certificate-form-field input:focus,
+.certificate-form-field textarea:focus {
+  border-color: #ae7920;
+
+  box-shadow:
+    0 0 0 3px rgba(174, 121, 32, 0.08);
+}
+
+.certificate-form-field input[type="file"] {
+  padding: 14px;
+
+  border-style: dashed;
+}
+
+.selected-pdf {
+  display: block;
+
+  margin-top: 10px;
+
+  text-align: center;
+
+  color: #8b671f;
+
+  font-size: 12px;
+}
+
+.certificate-upload-button {
+  min-width: 260px;
+
+  height: 54px;
+
+  border: 0;
+
+  border-radius: 6px;
+
+  background: #946413;
+
+  color: white;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.certificate-upload-button:hover {
+  background: #774f0c;
+}
+
+.certificate-upload-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.certification-trust {
+  width: calc(100% - 80px);
+
+  margin: 45px auto;
+
+  padding: 35px 45px;
+
+  background: #fffdfa;
+
+  border: 1px solid #e1d4c0;
+
+  border-radius: 15px;
+
+  display: grid;
+
+  grid-template-columns: 80px 1fr auto;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.trust-leaf {
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid #b88938;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #a16e1b;
+
+  font-size: 30px;
+}
+
+.trust-copy h2 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 31px;
+
+  font-weight: 400;
+}
+
+.trust-copy h2 strong {
+  color: #a97016;
+}
+
+.trust-copy p {
+  margin: 7px 0 0;
+
+  color: #766e63;
+
+  font-size: 13px;
+}
+
+.trust-final {
+  padding-left: 30px;
+
+  border-left: 1px solid #e1d3bd;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.trust-final span:first-child {
+  color: #8e641d;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.trust-final span:last-child {
+  color: #786e62;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.certification-footer {
+  min-height: 105px;
+
+  padding: 25px 5%;
+
+  box-sizing: border-box;
+
+  background: #20170e;
+
+  color: #eee2cf;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.certification-footer div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.certification-footer strong {
+  font-family: Georgia, serif;
+
+  font-size: 19px;
+}
+
+.certification-footer span {
+  margin-top: 5px;
+
+  color: #b99a69;
+
+  font-size: 7px;
+
+  letter-spacing: 1.7px;
+}
+
+.certification-footer p {
+  margin: 0;
+
+  color: #b6a48b;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   PDF VIEW MODAL
+========================================================= */
+
+.certificate-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 3000;
+
+  background: rgba(17, 12, 7, 0.84);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 22px;
+
+  backdrop-filter: blur(8px);
+
+  animation: certificateModalFade 0.2s ease;
+}
+
+@keyframes certificateModalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.certificate-modal-inner {
+  width: min(1050px, 96vw);
+
+  /*
+   * Actual PDF viewer is now inside this modal.
+   * Keep a controlled height so the modal does not
+   * become unnecessarily large.
+   */
+  height: min(82vh, 820px);
+
+  background: #f9f4eb;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  flex-direction: column;
+
+  animation: certificateModalUp 0.25s ease;
+}
+
+@keyframes certificateModalUp {
+  from {
+    transform: translateY(12px) scale(0.985);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.certificate-modal-header {
+  min-height: 70px;
+
+  padding: 0 20px;
+
+  background: #fffdf9;
+
+  border-bottom: 1px solid #e0d3bd;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+}
+
+.certificate-modal-header div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+}
+
+.certificate-modal-header span {
+  color: #93661d;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.certificate-modal-header strong {
+  color: #272018;
+
+  font-family: Georgia, serif;
+
+  font-size: 17px;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.certificate-modal-header button {
+  width: 40px;
+  height: 40px;
+
+  min-width: 40px;
+
+  border: 1px solid #d6c3a4;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #765014;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.certificate-modal-header button:hover {
+  background: #f7eddb;
+
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   MODAL DOCUMENT AREA
+========================================================= */
+
+.certificate-modal-document {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  background: #e8dfd0;
+
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+}
+
+/* =========================================================
+   ACTUAL PDF IFRAME
+========================================================= */
+
+.certificate-pdf-viewer {
+  display: block;
+
+  flex: 1 1 auto;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 0;
+
+  border: 0;
+
+  outline: none;
+
+  background: #ffffff;
+
+  overflow: auto;
+}
+
+/* =========================================================
+   OLD IMAGE PREVIEW
+   Kept because card/modal old styles may still exist.
+========================================================= */
+
+.certificate-modal-preview,
+.certificate-modal-preview-image {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  max-height: 100%;
+
+  min-height: 500px;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  border: 1px solid #d5c7b0;
+
+  box-shadow:
+    0 12px 30px rgba(58, 41, 21, 0.18);
+}
+
+/* =========================================================
+   MODAL EMPTY / ERROR STATE
+========================================================= */
+
+.certificate-modal-empty {
+  width: min(600px, 90%);
+
+  min-height: 300px;
+
+  background: #fffdfa;
+
+  border: 1px solid #ddcfb7;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+.certificate-modal-empty strong {
+  color: #8d641e;
+
+  font-family: Georgia, serif;
+
+  font-size: 24px;
+
+  font-weight: 400;
+}
+
+.certificate-modal-empty span {
+  margin-top: 10px;
+
+  color: #786e62;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   MODAL ACTION BAR
+========================================================= */
+
+.certificate-modal-actions {
+  min-height: 72px;
+
+  padding: 12px 18px;
+
+  box-sizing: border-box;
+
+  background: #fffdf9;
+
+  border-top: 1px solid #dfd1ba;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.certificate-modal-actions button,
+.certificate-modal-actions a {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border-radius: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================================================
+   OPEN ORIGINAL PDF
+========================================================= */
+
+.modal-open-pdf {
+  border: 1px solid #a97518;
+
+  background: #a36e10;
+
+  color: #ffffff;
+}
+
+.modal-open-pdf:hover {
+  background: #85590c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(125, 82, 9, 0.2);
+}
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.modal-download-pdf {
+  border: 1px solid #b98a3c;
+
+  background: #fffdf8;
+
+  color: #805913;
+}
+
+.modal-download-pdf:hover {
+  background: #f6ecd8;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   TABLET
+   761px - 1200px
+   3 PDFs PER ROW
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .certification-nav {
+    gap: 18px;
+  }
+
+  .certification-grid {
+    width: min(1100px, 94%);
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+  .certification-pillars {
+    gap: 35px;
+  }
+
+  .certification-hero-decoration {
+    display: none;
+  }
+
+  .certification-trust {
+    grid-template-columns: 65px 1fr;
+  }
+
+  .trust-final {
+    grid-column: 2;
+
+    border-left: 0;
+
+    border-top: 1px solid #e1d3bd;
+
+    padding: 18px 0 0;
+  }
+
+  .certificate-modal-inner {
+    width: min(960px, 95vw);
+
+    height: min(84vh, 780px);
+  }
+
+  .certificate-modal-document {
+    padding: 0;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   760px AND BELOW
+   1 PDF PER ROW
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .certification-navbar {
+    height: 70px;
+
+    padding: 0 15px;
+  }
+
+  .certification-brand-mark {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+  .certification-brand-info strong {
+    font-size: 17px;
+  }
+
+  .certification-brand-info small {
+    display: none;
+  }
+
+  .certification-nav {
+    display: none;
+  }
+
+  .certification-back {
+    padding: 9px 15px;
+
+    font-size: 13px;
+  }
+
+  .certification-hero {
+    min-height: 390px;
+  }
+
+  .certification-hero-content {
+    padding: 45px 18px;
+  }
+
+  .certification-hero h1 {
+    font-size: 45px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .certification-hero-content > p {
+    font-size: 14px;
+  }
+
+  .certification-pillars {
+    flex-direction: column;
+
+    gap: 15px;
+
+    align-items: flex-start;
+
+    width: 220px;
+  }
+
+  .certification-records {
+    padding: 55px 15px;
+  }
+
+  .certification-records-header {
+    width: 100%;
+
+    display: block;
+  }
+
+  .certification-records-header h2 {
+    font-size: 46px;
+  }
+
+  .certification-records-header > p {
+    width: auto;
+
+    text-align: left;
+
+    margin-top: 20px;
+  }
+
+  /* MOBILE = 1 PDF PER ROW */
+  .certification-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .certificate-preview {
+    height: 330px;
+  }
+
+  .certificate-card-content h3 {
+    font-size: 24px;
+  }
+
+  .certificate-card-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-delete {
+    width: calc(100% - 36px);
+
+    margin: 0 18px 18px;
+
+    min-height: 42px;
+  }
+
+  .certification-admin {
+    padding: 60px 15px;
+  }
+
+  .certificate-upload-form {
+    padding: 25px 18px;
+  }
+
+  .certificate-upload-button {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .certification-trust {
+    width: calc(100% - 30px);
+
+    margin: 25px auto;
+
+    padding: 25px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .trust-copy h2 {
+    font-size: 27px;
+  }
+
+  .trust-final {
+    grid-column: auto;
+  }
+
+  .certification-footer {
+    padding: 25px 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  /* =====================================================
+     MOBILE MODAL
+  ===================================================== */
+
+  .certificate-modal {
+    padding: 8px;
+  }
+
+  .certificate-modal-inner {
+    width: 100%;
+
+    height: 94vh;
+
+    border-radius: 9px;
+  }
+
+  .certificate-modal-header {
+    min-height: 62px;
+
+    padding: 0 12px;
+  }
+
+  .certificate-modal-header strong {
+    max-width: 240px;
+
+    font-size: 14px;
+  }
+
+  .certificate-modal-header button {
+    width: 36px;
+    height: 36px;
+
+    min-width: 36px;
+
+    font-size: 22px;
+  }
+
+  .certificate-modal-document {
+    padding: 0;
+
+    align-items: stretch;
+
+    overflow: hidden;
+  }
+
+  /* Actual PDF iframe */
+  .certificate-pdf-viewer {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 0;
+
+    border: 0;
+  }
+
+  .certificate-modal-preview,
+  .certificate-modal-preview-image {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-height: 0;
+
+    height: auto;
+  }
+
+  .certificate-modal-actions {
+    padding: 10px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .certificate-modal-actions button,
+  .certificate-modal-actions a {
+    width: 100%;
+
+    min-height: 43px;
+
+    padding: 0 8px;
+
+    font-size: 8px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .certification-hero h1 {
+    font-size: 39px;
+  }
+
+  .certification-kicker,
+  .certification-section-label {
+    letter-spacing: 2.5px;
+  }
+
+  .certificate-meta {
+    gap: 12px;
+
+    font-size: 10px;
+  }
+
+  .pdf-badge {
+    width: 44px;
+    height: 44px;
+
+    top: 10px;
+    right: 10px;
+  }
+
+  .pdf-badge strong {
+    font-size: 10px;
+  }
+
+  .pdf-file-icon {
+    font-size: 13px;
+  }
+
+  .certificate-preview {
+    height: 300px;
+  }
+
+  .certificate-delete {
+    width: calc(100% - 32px);
+
+    margin: 0 16px 16px;
+
+    min-height: 40px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .certificate-modal {
+    padding: 5px;
+  }
+
+  .certificate-modal-inner {
+    height: 96vh;
+  }
+
+  .certificate-modal-document {
+    padding: 0;
+  }
+
+  .certificate-modal-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-modal-actions button,
+  .certificate-modal-actions a {
+    min-height: 40px;
+  }
+}

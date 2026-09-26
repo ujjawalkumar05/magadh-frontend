@@ -1,0 +1,4021 @@
+/* =========================================================
+   MAGADH ORG — PREMIUM HOME
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #080604;
+  color: #fff;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================================
+   MAIN HOME
+========================================================= */
+
+.magadh-home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 6, 4, 0.12),
+      rgba(8, 6, 4, 0.18)
+    ),
+    url("../assets/backimage.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 88px;
+
+  padding: 0 5.5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  background: linear-gradient(
+    180deg,
+    rgba(7, 5, 3, 0.72),
+    rgba(7, 5, 3, 0)
+  );
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 230px;
+}
+
+.brand-symbol {
+  position: relative;
+
+  width: 48px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(239, 193, 65, 0.78);
+  border-radius: 50%;
+
+  color: #e9bd43;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(242, 201, 83, 0.15) 0%,
+      rgba(242, 201, 83, 0.055) 45%,
+      transparent 72%
+    );
+
+  box-shadow:
+    0 0 12px rgba(239, 193, 65, 0.18),
+    0 0 28px rgba(239, 193, 65, 0.05),
+    inset 0 0 14px rgba(239, 193, 65, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.brand-symbol:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 18px rgba(239, 193, 65, 0.3),
+    0 0 35px rgba(239, 193, 65, 0.08),
+    inset 0 0 18px rgba(239, 193, 65, 0.1);
+}
+
+.brand-leaf-logo {
+  width: 30px;
+  height: 30px;
+
+  display: block;
+
+  color: #e8bb3f;
+
+  filter:
+    drop-shadow(
+      0 0 4px rgba(239, 193, 65, 0.65)
+    )
+    drop-shadow(
+      0 0 10px rgba(239, 193, 65, 0.2)
+    );
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-name {
+  color: #f4cf64;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-shadow:
+    0 0 15px rgba(244, 207, 100, 0.18);
+}
+
+.brand-tagline {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =========================================================
+   DESKTOP NAV
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 29px;
+
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.nav-links a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 17px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f2c957;
+
+  text-shadow:
+    0 0 13px rgba(242, 201, 87, 0.35);
+}
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -11px;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #f5ca4f;
+
+  box-shadow:
+    0 0 7px #f5ca4f,
+    0 0 16px rgba(245, 202, 79, 0.75);
+}
+
+
+/* =========================================================
+   MOBILE NAV
+   Hidden on desktop.
+========================================================= */
+
+.mobile-nav-links {
+  display: none;
+}
+
+
+/* =========================================================
+   NAV ACTIONS
+========================================================= */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-right: 58px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search {
+  width: 195px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 22px;
+
+  background: rgba(15, 10, 5, 0.22);
+
+  backdrop-filter: blur(12px);
+}
+
+.search span {
+  margin-right: 7px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 30px;
+}
+
+.search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 15px;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+
+/* =========================================================
+   ACCOUNT
+========================================================= */
+
+.account-trigger {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  cursor: pointer;
+  outline: none;
+}
+
+.account-user-name {
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+
+  text-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.account-trigger:hover .account-user-name,
+.account-trigger[aria-expanded="true"] .account-user-name {
+  color: #f4cf64;
+}
+
+.account-menu {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 300;
+}
+
+.user-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border:
+    1px solid rgba(244, 207, 100, 0.45);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      rgba(244, 207, 100, 0.18),
+      rgba(12, 8, 4, 0.55)
+    );
+
+  color: #f4cf64;
+
+  box-shadow:
+    0 0 12px rgba(244, 201, 79, 0.12),
+    inset 0 0 12px rgba(244, 201, 79, 0.06);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.user-icon svg {
+  width: 25px;
+  height: 25px;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(244, 207, 100, 0.35)
+    );
+}
+
+.user-icon:hover,
+.account-trigger[aria-expanded="true"] .user-icon {
+  transform: translateY(-2px);
+
+  border-color: rgba(244, 207, 100, 0.9);
+
+  color: #ffe38a;
+
+  box-shadow:
+    0 0 15px rgba(244, 201, 79, 0.32),
+    0 0 30px rgba(244, 201, 79, 0.10),
+    inset 0 0 14px rgba(244, 201, 79, 0.09);
+}
+
+
+/* =========================================================
+   ACCOUNT DROPDOWN
+========================================================= */
+
+.account-dropdown {
+  position: absolute;
+
+  top: 53px;
+  right: 0;
+
+  width: 205px;
+
+  padding: 14px;
+
+  border:
+    1px solid rgba(244, 207, 100, 0.38);
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 19, 9, 0.97),
+      rgba(9, 6, 3, 0.98)
+    );
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(244, 201, 79, 0.08),
+    inset 0 0 22px rgba(244, 201, 79, 0.025);
+
+  animation:
+    accountDropdownIn 0.2s ease-out;
+}
+
+@keyframes accountDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-7px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.account-dropdown-header {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 3px 4px 12px;
+
+  margin-bottom: 5px;
+
+  border-bottom:
+    1px solid rgba(244, 207, 100, 0.12);
+}
+
+.account-dropdown-kicker {
+  color: rgba(244, 207, 100, 0.65);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.account-dropdown-header strong {
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+}
+
+.account-dropdown-header small {
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 10px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-dropdown button {
+  width: 100%;
+
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+
+  border-radius: 9px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.account-dropdown-login {
+  margin-top: 4px;
+
+  border:
+    1px solid rgba(244, 207, 100, 0.32);
+
+  background:
+    rgba(244, 207, 100, 0.08);
+
+  color: #f4cf64;
+}
+
+.account-dropdown-register {
+  margin-top: 8px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.account-dropdown button:hover {
+  transform: translateX(2px);
+}
+
+.account-dropdown-login:hover {
+  border-color: rgba(244, 207, 100, 0.75);
+
+  background:
+    rgba(244, 207, 100, 0.15);
+
+  color: #ffe28a;
+}
+
+.account-dropdown-register:hover {
+  border-color: rgba(244, 207, 100, 0.45);
+
+  background:
+    rgba(244, 207, 100, 0.08);
+
+  color: #f4cf64;
+}
+
+.account-dropdown-logout {
+  margin-top: 9px !important;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.10) !important;
+
+  border-radius:
+    0 0 9px 9px !important;
+
+  padding-top: 10px !important;
+
+  color:
+    rgba(255, 130, 110, 0.92) !important;
+
+  background:
+    transparent !important;
+}
+
+.account-dropdown-logout:hover {
+  color: #ff9b87 !important;
+
+  background:
+    rgba(255, 90, 70, 0.07) !important;
+}
+
+.account-arrow {
+  font-size: 16px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.account-dropdown button:hover .account-arrow {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart {
+  position: fixed;
+  top: 23px;
+  right: 22px;
+
+  z-index: 350;
+
+  border: none;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 30px;
+
+  transition: 0.25s ease;
+}
+
+.cart:hover {
+  color: #f4c951;
+
+  transform: translateY(-2px);
+}
+
+.cart span {
+  position: absolute;
+
+  top: -9px;
+  right: -9px;
+
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1c64d;
+
+  color: #171007;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  min-height: 760px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border: none !important;
+  outline: none !important;
+
+  background: transparent !important;
+
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -5;
+
+  background: transparent;
+
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 4, 2, 0.86) 0%,
+      rgba(7, 4, 2, 0.67) 27%,
+      rgba(7, 4, 2, 0.30) 53%,
+      rgba(7, 4, 2, 0.10) 76%,
+      rgba(7, 4, 2, 0.24) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 3, 1, 0.35) 0%,
+      transparent 32%,
+      rgba(5, 3, 1, 0.38) 100%
+    );
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 70% 38%,
+      rgba(245, 187, 63, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 35% 48%,
+      transparent 35%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 20;
+
+  width: 52%;
+
+  margin-left: 7%;
+
+  padding-top: 40px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 20px;
+
+  color: #efc957;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 3.3px;
+
+  text-transform: uppercase;
+}
+
+.eyebrow i {
+  width: 52px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #eac04c;
+
+  box-shadow:
+    0 0 9px rgba(237, 194, 71, 0.7);
+}
+
+
+/* =========================================================
+   TYPEWRITER
+========================================================= */
+
+.typing-eyebrow,
+.typing-heading {
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  transform: none !important;
+  filter: none !important;
+}
+
+.typewriter-text {
+  display: inline-block;
+
+  white-space: nowrap;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  text-shadow:
+    0 0 7px currentColor,
+    0 0 16px rgba(255, 220, 120, 0.22);
+}
+
+.hero h1 strong .typewriter-text {
+  color: #f4c94f !important;
+
+  text-shadow:
+    0 0 8px rgba(244, 201, 79, 0.95),
+    0 0 20px rgba(244, 201, 79, 0.55),
+    0 0 38px rgba(244, 201, 79, 0.25);
+}
+
+.typing-cursor {
+  display: inline-block;
+
+  width: 3px;
+  height: 0.82em;
+
+  margin-left: 7px;
+
+  vertical-align: -0.05em;
+
+  border-radius: 2px;
+
+  background: #f7d05d;
+
+  box-shadow:
+    0 0 8px #f7d05d,
+    0 0 18px rgba(247, 208, 93, 0.9);
+
+  animation:
+    cursorBlink 0.65s infinite;
+}
+
+@keyframes cursorBlink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0.12;
+  }
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.hero h1 {
+  margin: 0;
+
+  max-width: 760px;
+
+  color: #fff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(52px, 5.4vw, 84px);
+
+  line-height: 1.02;
+
+  font-weight: 400;
+
+  letter-spacing: -2.8px;
+}
+
+.hero h1 strong {
+  color: #f4c94f;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  margin-top: 27px;
+
+  max-width: 560px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+
+  text-shadow:
+    0 1px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+.primary,
+.secondary {
+  height: 50px;
+
+  padding: 0 24px;
+
+  border-radius: 5px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.primary {
+  border: 1px solid #f1c64e;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8d66c,
+      #d5a633
+    );
+
+  color: #171007;
+
+  box-shadow:
+    0 10px 30px rgba(218, 168, 49, 0.25);
+}
+
+.primary span {
+  margin-left: 13px;
+
+  font-size: 18px;
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 38px rgba(224, 174, 54, 0.4);
+}
+
+.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background: rgba(20, 13, 7, 0.25);
+
+  color: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(10px);
+}
+
+.secondary:hover {
+  transform: translateY(-3px);
+
+  border-color: #eac04b;
+
+  color: #f5cc5b;
+}
+
+
+/* =========================================================
+   HERO FEATURES
+========================================================= */
+
+.hero-features {
+  display: flex;
+  align-items: center;
+
+  gap: 48px;
+
+  margin-top: 50px;
+
+  position: relative;
+  top: 110px;
+}
+
+.hero-feature {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #efc44d;
+
+  font-size: 32px;
+
+  text-shadow:
+    0 0 12px rgba(239, 196, 77, 0.7);
+}
+
+.hero-feature > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.hero-feature b {
+  position: relative;
+
+  color: #f4f0e6;
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  letter-spacing: 1.1px;
+
+  line-height: 1.25;
+
+  text-shadow:
+    0 2px 2px rgba(48, 27, 7, 0.98),
+    0 4px 7px rgba(30, 16, 4, 0.95),
+    0 7px 14px rgba(15, 8, 2, 0.85);
+}
+
+.hero-feature b::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -10px;
+
+  width: 82%;
+  height: 13px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 210, 76, 0.72) 0%,
+      rgba(229, 174, 45, 0.42) 28%,
+      rgba(95, 57, 10, 0.28) 52%,
+      rgba(0, 0, 0, 0.55) 72%,
+      transparent 100%
+    );
+
+  filter: blur(6px);
+
+  opacity: 0.82;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.hero-feature small {
+  color: #d8a93a;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.6px;
+
+  line-height: 1.35;
+
+  text-shadow:
+    0 1px 2px rgba(35, 18, 4, 0.95),
+    0 3px 6px rgba(20, 10, 2, 0.80);
+}
+
+
+/* =========================================================
+   PRODUCT
+========================================================= */
+
+.product-area {
+  position: absolute;
+
+  z-index: 15;
+
+  right: -10%;
+  bottom: 0;
+
+  width: 45%;
+  height: 88%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.product-glow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: 13%;
+  bottom: 10%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 204, 75, 0.34) 0%,
+      rgba(224, 160, 32, 0.16) 35%,
+      rgba(180, 115, 15, 0.04) 60%,
+      transparent 75%
+    );
+
+  filter: blur(12px);
+
+  animation:
+    goldenGlow 4.5s ease-in-out infinite;
+}
+
+@keyframes goldenGlow {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.72;
+  }
+
+  50% {
+    transform: scale(1.07);
+    opacity: 1;
+  }
+}
+
+.product {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(390px, 72%);
+
+  max-height: 730px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 28px 35px rgba(0, 0, 0, 0.55)
+    )
+    drop-shadow(
+      0 0 28px rgba(244, 190, 51, 0.16)
+    );
+
+  animation:
+    bottleFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes bottleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* =========================================================
+   FAMILY IMAGE
+========================================================= */
+
+.family-image-area {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 35%;
+  bottom: 0;
+
+  width: 54%;
+  height: 78%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.family-image {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 108%;
+  max-width: none;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 18px 28px rgba(0, 0, 0, 0.28)
+    );
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.magadh-journey {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  padding:
+    125px 6% 145px;
+
+  background: transparent !important;
+}
+
+.magadh-journey-header {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 850px;
+
+  margin: 0 auto 105px;
+
+  text-align: center;
+}
+
+.magadh-journey-eyebrow {
+  color: #f4cf64;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2.2px;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 0 12px rgba(244, 201, 79, 0.25);
+}
+
+.magadh-journey-header h2 {
+  margin-top: 18px;
+
+  color: #fff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(43px, 5vw, 68px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.95),
+    0 7px 25px rgba(0, 0, 0, 0.75),
+    0 13px 35px rgba(0, 0, 0, 0.55);
+}
+
+.magadh-journey-header h2 span {
+  color: #f4cf64;
+
+  text-shadow:
+    0 0 7px rgba(255, 239, 176, 0.85),
+    0 0 16px rgba(244, 201, 79, 0.65),
+    0 0 30px rgba(244, 201, 79, 0.28),
+    0 3px 10px rgba(0, 0, 0, 0.95),
+    0 8px 22px rgba(0, 0, 0, 0.75);
+}
+
+.magadh-journey-intro {
+  margin-top: 24px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 1),
+    0 5px 15px rgba(0, 0, 0, 0.85),
+    0 10px 25px rgba(0, 0, 0, 0.60),
+    0 0 5px rgba(255, 255, 255, 0.14);
+}
+
+.magadh-journey-question {
+  margin-top: 22px;
+
+  color: rgba(255, 245, 215, 0.96);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  line-height: 1.6;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 1),
+    0 5px 16px rgba(0, 0, 0, 0.85),
+    0 10px 25px rgba(0, 0, 0, 0.60),
+    0 0 7px rgba(255, 235, 170, 0.28);
+}
+
+
+/* =========================================================
+   JOURNEY TIMELINE
+========================================================= */
+
+.magadh-journey-timeline {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.magadh-journey-path {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.magadh-journey-path-base {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(201, 155, 50, 0.45) 7%,
+      rgba(244, 207, 100, 0.78) 50%,
+      rgba(201, 155, 50, 0.45) 93%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 8px rgba(244, 201, 79, 0.20);
+}
+
+.magadh-journey-path-glow {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 10px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(244, 201, 79, 0.14),
+      rgba(244, 201, 79, 0.40),
+      rgba(244, 201, 79, 0.14),
+      transparent
+    );
+
+  filter: blur(7px);
+}
+
+.magadh-journey-path-light {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 9px;
+  height: 125px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.28) 12%,
+      rgba(255, 248, 210, 0.75) 30%,
+      #fff7d6 43%,
+      #ffffff 50%,
+      #ffe9a5 60%,
+      rgba(255, 232, 160, 0.60) 76%,
+      rgba(255, 255, 255, 0.22) 90%,
+      transparent 100%
+    );
+
+  filter:
+    blur(0.6px)
+    drop-shadow(
+      0 0 8px rgba(255, 245, 205, 1)
+    )
+    drop-shadow(
+      0 0 18px rgba(255, 226, 126, 0.90)
+    )
+    drop-shadow(
+      0 0 34px rgba(244, 201, 79, 0.65)
+    );
+
+  opacity: 1;
+
+  will-change: transform;
+
+  z-index: 8;
+}
+
+
+/* =========================================================
+   JOURNEY STEP
+========================================================= */
+
+.magadh-journey-step {
+  position: relative;
+
+  z-index: 4;
+
+  width: 50%;
+
+  min-height: 390px;
+
+  display: flex;
+
+  padding:
+    42px 58px;
+}
+
+.magadh-journey-step-left {
+  margin-right: auto;
+
+  justify-content: flex-end;
+
+  text-align: right;
+}
+
+.magadh-journey-step-right {
+  margin-left: auto;
+
+  justify-content: flex-start;
+
+  text-align: left;
+}
+
+.magadh-journey-marker {
+  position: absolute;
+
+  top: 53px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #fff4c5 0%,
+      #f4cf64 27%,
+      #c18a25 55%,
+      #5d3d0c 70%,
+      #080604 73%
+    );
+
+  border:
+    1px solid rgba(255, 231, 157, 0.90);
+
+  color: #211605;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 0 8px rgba(244, 201, 79, 0.85),
+    0 0 22px rgba(244, 201, 79, 0.32),
+    inset 0 0 9px rgba(255, 247, 205, 0.45);
+}
+
+.magadh-journey-step-left .magadh-journey-marker {
+  right: -21px;
+}
+
+.magadh-journey-step-right .magadh-journey-marker {
+  left: -21px;
+}
+
+.magadh-journey-content {
+  width: 100%;
+
+  max-width: 460px;
+
+  position: relative;
+}
+
+.magadh-journey-step-label {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 78px;
+  height: 27px;
+
+  padding: 0 12px;
+
+  border:
+    1px solid rgba(244, 201, 79, 0.30);
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(244, 201, 79, 0.11),
+      rgba(244, 201, 79, 0.025)
+    );
+
+  color: #f4cf64;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 1),
+    0 5px 13px rgba(0, 0, 0, 0.95),
+    0 0 8px rgba(255, 226, 135, 0.35);
+
+  box-shadow:
+    inset 0 0 15px rgba(244, 201, 79, 0.035),
+    0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.magadh-journey-content h3 {
+  margin-top: 17px;
+
+  color: #fff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 31px;
+
+  line-height: 1.12;
+
+  font-weight: 500;
+
+  letter-spacing: -0.6px;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 5px 10px rgba(0, 0, 0, 1),
+    0 9px 20px rgba(0, 0, 0, 0.95),
+    0 14px 30px rgba(0, 0, 0, 0.80),
+    0 0 5px rgba(255, 250, 225, 0.40),
+    0 0 13px rgba(255, 226, 130, 0.28),
+    0 0 25px rgba(244, 201, 79, 0.15);
+
+  animation:
+    journeyTextGlow 4.5s ease-in-out infinite;
+}
+
+@keyframes journeyTextGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 1),
+      0 5px 10px rgba(0, 0, 0, 1),
+      0 9px 20px rgba(0, 0, 0, 0.95),
+      0 14px 30px rgba(0, 0, 0, 0.80),
+      0 0 5px rgba(255, 250, 225, 0.30),
+      0 0 13px rgba(255, 226, 130, 0.18),
+      0 0 25px rgba(244, 201, 79, 0.10);
+  }
+
+  50% {
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 1),
+      0 5px 10px rgba(0, 0, 0, 1),
+      0 9px 20px rgba(0, 0, 0, 0.95),
+      0 14px 30px rgba(0, 0, 0, 0.80),
+      0 0 7px rgba(255, 250, 225, 0.60),
+      0 0 17px rgba(255, 226, 130, 0.38),
+      0 0 30px rgba(244, 201, 79, 0.22);
+  }
+}
+
+.magadh-journey-content h4 {
+  margin-top: 8px;
+
+  color: #f4cf64;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 5px 10px rgba(0, 0, 0, 1),
+    0 9px 18px rgba(0, 0, 0, 0.95),
+    0 13px 27px rgba(0, 0, 0, 0.75),
+    0 0 6px rgba(255, 244, 190, 0.65),
+    0 0 14px rgba(244, 201, 79, 0.42),
+    0 0 25px rgba(244, 201, 79, 0.18);
+}
+
+.magadh-journey-description {
+  margin-top: 20px;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  font-weight: 400;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 5px 10px rgba(0, 0, 0, 1),
+    0 9px 18px rgba(0, 0, 0, 0.95),
+    0 14px 28px rgba(0, 0, 0, 0.75),
+    0 0 4px rgba(255, 255, 255, 0.25),
+    0 0 10px rgba(255, 230, 160, 0.18);
+}
+
+.magadh-journey-content ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin-top: 21px;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.magadh-journey-content li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.90);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 5px 10px rgba(0, 0, 0, 1),
+    0 9px 18px rgba(0, 0, 0, 0.90),
+    0 13px 25px rgba(0, 0, 0, 0.70),
+    0 0 4px rgba(255, 255, 255, 0.20);
+}
+
+.magadh-journey-step-left
+.magadh-journey-content li {
+  justify-content: flex-end;
+}
+
+.magadh-journey-content li span {
+  color: #f4cf64;
+
+  font-size: 8px;
+
+  text-shadow:
+    0 0 6px rgba(255, 244, 190, 0.95),
+    0 0 13px rgba(244, 201, 79, 0.85),
+    0 2px 6px rgba(0, 0, 0, 1),
+    0 5px 12px rgba(0, 0, 0, 0.85);
+}
+
+.magadh-journey-ending {
+  margin-top: 24px;
+
+  color: rgba(255, 245, 215, 0.94);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  line-height: 1.7;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 1),
+    0 5px 12px rgba(0, 0, 0, 0.95),
+    0 9px 22px rgba(0, 0, 0, 0.80),
+    0 0 7px rgba(255, 240, 190, 0.45),
+    0 0 16px rgba(244, 201, 79, 0.20);
+}
+
+
+/* =========================================================
+   FINAL JOURNEY
+========================================================= */
+
+.magadh-journey-final {
+  min-height: 560px;
+}
+
+.magadh-journey-final
+.magadh-journey-content h3 {
+  font-size: 36px;
+}
+
+
+/* =========================================================
+   QR
+========================================================= */
+
+.magadh-journey-qr {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 27px;
+
+  padding: 16px 18px;
+
+  border:
+    1px solid rgba(244, 201, 79, 0.27);
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(244, 201, 79, 0.10),
+      rgba(12, 8, 4, 0.30)
+    );
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.22),
+    inset 0 0 25px rgba(244, 201, 79, 0.025);
+}
+
+.magadh-journey-qr-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid #d9ad45;
+
+  border-radius: 7px;
+
+  color: #f8df91;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(244, 201, 79, 0.16) 0,
+      rgba(244, 201, 79, 0.16) 2px,
+      transparent 2px,
+      transparent 5px
+    );
+
+  box-shadow:
+    0 0 16px rgba(244, 201, 79, 0.18),
+    0 5px 18px rgba(0, 0, 0, 0.45);
+}
+
+.magadh-journey-qr > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.magadh-journey-qr strong {
+  color: #f4cf64;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 1),
+    0 5px 14px rgba(0, 0, 0, 0.85),
+    0 0 8px rgba(255, 231, 155, 0.35);
+}
+
+.magadh-journey-qr span {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 10px;
+
+  letter-spacing: 0.8px;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 1),
+    0 5px 14px rgba(0, 0, 0, 0.80);
+}
+
+.magadh-journey-quote {
+  margin-top: 25px;
+
+  color: rgba(255, 245, 215, 0.92);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  line-height: 1.7;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 1),
+    0 5px 14px rgba(0, 0, 0, 0.90),
+    0 9px 22px rgba(0, 0, 0, 0.70),
+    0 0 7px rgba(255, 235, 180, 0.35);
+}
+
+.magadh-journey-transparency {
+  margin-top: 28px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(244, 201, 79, 0.15);
+}
+
+.magadh-journey-transparency span {
+  display: block;
+
+  color: #f4cf64;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 1),
+    0 5px 14px rgba(0, 0, 0, 0.90),
+    0 0 8px rgba(255, 237, 177, 0.60),
+    0 0 17px rgba(244, 201, 79, 0.30);
+}
+
+.magadh-journey-transparency p {
+  margin-top: 6px;
+
+  color: rgba(255, 255, 255, 0.70);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 1),
+    0 5px 14px rgba(0, 0, 0, 0.85),
+    0 0 5px rgba(255, 255, 255, 0.14);
+}
+
+
+/* =========================================================
+   BENEFITS / FINAL BRAND
+========================================================= */
+
+.benefits {
+  padding: 55px 20px 65px;
+  text-align: center;
+}
+
+.benefit-message {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.benefit-message .benefit-main,
+.benefit-message .benefit-brand,
+.benefit-message .benefit-product,
+.benefit-message .benefit-line,
+.benefit-message .benefit-family,
+.benefit-message .benefit-ending {
+  background: linear-gradient(
+    110deg,
+    #4a3208 0%,
+    #8c6414 15%,
+    #c99b28 30%,
+    #f3cf5b 42%,
+    #fff4ad 49%,
+    #ffffff 51%,
+    #ffe06a 57%,
+    #d2a52e 70%,
+    #8a6113 85%,
+    #3d2907 100%
+  );
+
+  background-size: 300% 100%;
+  background-position: 200% center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter:
+    drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.98))
+    drop-shadow(0 5px 8px rgba(0, 0, 0, 0.85));
+
+  animation:
+    magadhBrandReflection 5.5s linear infinite;
+}
+
+@keyframes magadhBrandReflection {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.benefit-main {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.55;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+  font-weight: 600;
+}
+
+.benefit-brand {
+  margin-top: 22px;
+
+  font-size: 27px;
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.benefit-product {
+  margin-top: 6px;
+
+  font-size: 19px;
+  line-height: 1.35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+  font-weight: 700;
+}
+
+.benefit-line {
+  margin-top: 8px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.benefit-family {
+  margin-top: 22px;
+
+  font-size: 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+  font-weight: 700;
+}
+
+.benefit-ending {
+  margin-top: 8px;
+
+  font-size: 15px;
+  line-height: 1.55;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   ADMIN PANEL
+========================================================= */
+
+.admin-panel-button {
+  position: fixed;
+
+  top: 17px;
+  right: 12px;
+
+  z-index: 360;
+
+  width: 95px;
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 7px 11px;
+
+  border:
+    1px solid rgba(244, 207, 100, 0.48);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(48, 34, 14, 0.94),
+      rgba(13, 9, 4, 0.98)
+    );
+
+  color: #f4cf64;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(244, 201, 79, 0.09),
+    inset 0 1px 0 rgba(255, 245, 195, 0.10),
+    inset 0 0 22px rgba(244, 201, 79, 0.035);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background 0.28s ease;
+}
+
+.admin-panel-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -130%;
+
+  width: 75%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      105deg,
+      transparent,
+      rgba(255, 242, 186, 0.17),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.65s ease;
+
+  pointer-events: none;
+}
+
+.admin-panel-button:hover::before {
+  left: 145%;
+}
+
+.admin-panel-button:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(255, 222, 123, 0.90);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(63, 44, 15, 0.97),
+      rgba(16, 11, 5, 0.99)
+    );
+
+  box-shadow:
+    0 17px 38px rgba(0, 0, 0, 0.52),
+    0 0 22px rgba(244, 201, 79, 0.18),
+    0 0 42px rgba(244, 201, 79, 0.06),
+    inset 0 1px 0 rgba(255, 245, 195, 0.16),
+    inset 0 0 20px rgba(244, 201, 79, 0.06);
+
+  color: #ffe596;
+}
+
+.admin-panel-button:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.admin-panel-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(244, 207, 100, 0.40);
+
+  border-radius: 10px;
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      rgba(244, 207, 100, 0.20),
+      rgba(244, 207, 100, 0.035) 62%,
+      transparent 100%
+    );
+
+  color: #f4cf64;
+
+  box-shadow:
+    inset 0 0 12px rgba(244, 201, 79, 0.07),
+    0 0 10px rgba(244, 201, 79, 0.08);
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    color 0.28s ease;
+}
+
+.admin-panel-icon svg {
+  width: 19px;
+  height: 19px;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      0 0 5px rgba(244, 207, 100, 0.42)
+    );
+}
+
+.admin-panel-button:hover .admin-panel-icon {
+  transform: scale(1.05);
+
+  border-color:
+    rgba(244, 207, 100, 0.82);
+
+  color: #ffe596;
+}
+
+.admin-panel-text {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin-left: 9px;
+
+  min-width: 0;
+
+  text-align: left;
+}
+
+.admin-panel-text strong {
+  display: block;
+
+  color: #f6d77a;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.admin-panel-text small {
+  display: block;
+
+  margin-top: 4px;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  font-size: 7px;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.admin-panel-arrow {
+  flex-shrink: 0;
+
+  margin-left: 7px;
+
+  color: rgba(244, 207, 100, 0.72);
+
+  font-size: 20px;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.admin-panel-button:hover .admin-panel-arrow {
+  transform: translateX(4px);
+
+  color: #ffe596;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+  width: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(38, 23, 8, 0.98) 0%,
+      rgba(20, 11, 4, 1) 55%,
+      rgba(9, 5, 2, 1) 100%
+    ) !important;
+
+  color: #ffffff !important;
+
+  border-top:
+    1px solid rgba(244, 201, 79, 0.22);
+
+  box-shadow:
+    0 -12px 35px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 220, 120, 0.05);
+
+  position: relative;
+}
+
+footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 55%;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(244, 201, 79, 0.55),
+      transparent
+    );
+
+  box-shadow:
+    0 0 14px rgba(244, 201, 79, 0.25);
+
+  pointer-events: none;
+}
+
+footer p,
+footer span,
+footer div,
+footer strong,
+footer small {
+  color: #ffffff !important;
+}
+
+footer a {
+  color: #ffffff !important;
+
+  transition:
+    color 0.25s ease,
+    text-shadow 0.25s ease;
+}
+
+footer a:hover {
+  color: #f4cf64 !important;
+
+  text-shadow:
+    0 0 10px rgba(244, 207, 100, 0.35);
+}
+
+
+/* =========================================================
+   1200px
+   DESKTOP PRESERVED
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .navbar {
+    padding: 0 4%;
+  }
+
+  .nav-links {
+    gap: 20px;
+    margin-right: 20px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  .search {
+    width: 150px;
+  }
+
+  .hero-content {
+    width: 55%;
+    margin-left: 5%;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .product-area {
+    right: 2%;
+    width: 45%;
+  }
+
+  .product {
+    width: 350px;
+  }
+
+  .family-image-area {
+    left: 25%;
+    width: 56%;
+    height: 76%;
+  }
+
+  .family-image {
+    width: 110%;
+  }
+
+  .hero-features {
+    gap: 28px;
+  }
+
+  .feature-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+  }
+
+  .hero-feature {
+    gap: 11px;
+  }
+
+  .hero-feature b {
+    font-size: 13px;
+  }
+
+  .hero-feature small {
+    font-size: 10px;
+  }
+
+  .magadh-journey-step {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
+
+
+/* =========================================================
+   950px
+   TABLET OPTIMIZATION
+========================================================= */
+
+@media (max-width: 950px) {
+
+  /*
+    Tablet gets its own mobile-style navigation.
+  */
+
+  .navbar {
+    height: 82px;
+
+    padding:
+      0 20px;
+
+    align-items: center;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7, 5, 3, 0.92),
+        rgba(7, 5, 3, 0.55)
+      );
+  }
+
+  .brand {
+    min-width: auto;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-nav-links {
+    position: absolute;
+
+    top: 82px;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+      8px 16px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+
+    background:
+      rgba(8, 5, 2, 0.82);
+
+    border-top:
+      1px solid rgba(244, 207, 100, 0.10);
+
+    border-bottom:
+      1px solid rgba(244, 207, 100, 0.12);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    z-index: 150;
+  }
+
+  .mobile-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-nav-item {
+    flex:
+      0 0 auto;
+
+    height: 31px;
+
+    padding:
+      0 12px;
+
+    border:
+      1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 18px;
+
+    background:
+      rgba(255, 255, 255, 0.045);
+
+    color:
+      rgba(255, 255, 255, 0.72);
+
+    font-size: 10px;
+
+    font-weight: 650;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .mobile-nav-item:hover,
+  .mobile-nav-item.active {
+    color: #f4cf64;
+
+    border-color:
+      rgba(244, 207, 100, 0.48);
+
+    background:
+      rgba(244, 207, 100, 0.10);
+  }
+
+  .nav-actions {
+    gap: 9px;
+
+    padding-right: 42px;
+  }
+
+  .account-user-name {
+    display: none;
+  }
+
+  .user-icon {
+    width: 39px;
+    height: 39px;
+  }
+
+  .user-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .account-dropdown {
+    top: 49px;
+    right: 0;
+
+    width: 205px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  /*
+    IMPORTANT:
+    Remove fixed background on tablet.
+    Fixed backgrounds can cause scroll stutter.
+  */
+
+  .magadh-home {
+    background-attachment: scroll;
+  }
+
+  .hero {
+    min-height: 820px;
+
+    padding-top: 105px;
+  }
+
+  .hero-content {
+    width: 58%;
+
+    margin-left: 5%;
+
+    padding-top: 55px;
+  }
+
+  .hero h1 {
+    font-size: 51px;
+  }
+
+  .hero-features {
+    gap: 18px;
+
+    top: 70px;
+  }
+
+  .hero-feature {
+    gap: 8px;
+  }
+
+  .feature-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  .hero-feature b {
+    font-size: 11px;
+  }
+
+  .hero-feature small {
+    font-size: 9px;
+  }
+
+  /*
+    Bottle hidden on tablet.
+  */
+
+  .product-area {
+    display: none !important;
+  }
+
+  .family-image-area {
+    left: 27%;
+
+    width: 70%;
+
+    height: 64%;
+
+    bottom: 0;
+  }
+
+  .family-image {
+    width: 108%;
+  }
+
+  /*
+    Journey scroll performance
+  */
+
+  .magadh-journey {
+    padding:
+      100px 5% 120px;
+  }
+
+  .magadh-journey-header {
+    margin-bottom: 75px;
+  }
+
+  .magadh-journey-step {
+    min-height: 420px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .magadh-journey-content h3 {
+    font-size: 27px;
+  }
+
+  .magadh-journey-content h4 {
+    font-size: 13px;
+  }
+
+  .magadh-journey-description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .magadh-journey-content li {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .magadh-journey-final {
+    min-height: 560px;
+  }
+
+  /*
+    Reduce expensive blur on tablet.
+  */
+
+  .magadh-journey-path-glow {
+    filter: blur(4px);
+  }
+
+  .magadh-journey-path-light {
+    filter:
+      drop-shadow(
+        0 0 8px rgba(255, 245, 205, 0.9)
+      )
+      drop-shadow(
+        0 0 18px rgba(255, 226, 126, 0.6)
+      );
+  }
+
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* =======================================================
+     ADMIN TABLET
+  ======================================================= */
+
+  .admin-panel-button {
+    width: 126px;
+
+    min-height: 47px;
+
+    top: 15px;
+    right: 8px;
+
+    padding: 6px 9px;
+
+    border-radius: 13px;
+  }
+
+  .admin-panel-icon {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 9px;
+  }
+
+  .admin-panel-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .admin-panel-text {
+    margin-left: 7px;
+  }
+
+  .admin-panel-text strong {
+    font-size: 8px;
+    letter-spacing: 0.7px;
+  }
+
+  .admin-panel-text small {
+    font-size: 6px;
+  }
+
+  .admin-panel-arrow {
+    margin-left: 5px;
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   800px
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  /*
+    Mobile navbar is now two-layer:
+    brand + account top
+    navigation buttons below
+  */
+
+  .navbar {
+    position: absolute;
+
+    height: 72px;
+
+    padding:
+      0 15px;
+
+    align-items: center;
+  }
+
+  .brand-symbol {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-leaf-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  /*
+    MOBILE NAV FIX
+  */
+
+  .mobile-nav-links {
+    top: 72px;
+
+    padding:
+      7px 12px;
+
+    gap: 5px;
+
+    background:
+      rgba(8, 5, 2, 0.94);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .mobile-nav-item {
+    height: 30px;
+
+    padding:
+      0 11px;
+
+    font-size: 9px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+
+    padding-right: 38px;
+  }
+
+  .user-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .account-user-name {
+    display: none;
+  }
+
+  .user-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .account-dropdown {
+    top: 48px;
+    right: -3px;
+
+    width: 190px;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /*
+    FIX SCROLL LAG
+  */
+
+  .magadh-home {
+    background-attachment: scroll;
+
+    /*
+      Prevent browser from doing expensive background
+      repainting while scrolling.
+    */
+
+    contain: paint;
+  }
+
+  /*
+    Hero becomes normal flow.
+    No bottle.
+  */
+
+  .hero {
+    min-height: 760px;
+
+    height: auto;
+
+    display: block;
+
+    padding-top: 0;
+
+    overflow: hidden;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(6, 4, 2, 0.72),
+        rgba(6, 4, 2, 0.36) 42%,
+        rgba(6, 4, 2, 0.82) 100%
+      );
+  }
+
+  .hero-content {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding:
+      155px 20px 0;
+
+    text-align: center;
+
+    z-index: 30;
+  }
+
+  .eyebrow {
+    justify-content: center;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .eyebrow i {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(40px, 10vw, 56px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    margin:
+      22px auto 0;
+
+    max-width: 480px;
+
+    font-size: 12px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .buttons {
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 27px;
+  }
+
+  .primary,
+  .secondary {
+    height: 46px;
+
+    padding:
+      0 16px;
+
+    font-size: 10px;
+  }
+
+  /*
+    Hero features.
+  */
+
+  .hero-features {
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 34px;
+
+    top: 0;
+
+    position: relative;
+
+    z-index: 35;
+  }
+
+  .hero-feature {
+    gap: 6px;
+  }
+
+  .feature-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 22px;
+  }
+
+  .hero-feature b {
+    font-size: 9px;
+  }
+
+  .hero-feature small {
+    font-size: 8px;
+  }
+
+  /*
+    BOTTLE COMPLETELY HIDDEN
+  */
+
+  .product-area,
+  .product,
+  .product-glow {
+    display: none !important;
+  }
+
+  /*
+    Family image remains.
+    It replaces bottle visual area.
+  */
+
+  .family-image-area {
+    left: 3%;
+
+    bottom: 0;
+
+    width: 94%;
+
+    height: 300px;
+
+    z-index: 12;
+  }
+
+  .family-image {
+    width: 112%;
+
+    left: -6%;
+  }
+
+
+  /* =======================================================
+     JOURNEY MOBILE
+  ======================================================= */
+
+  .magadh-journey {
+    padding:
+      85px 24px 105px;
+
+    /*
+      Prevent unnecessary rendering complexity.
+    */
+
+    contain: layout paint;
+  }
+
+  .magadh-journey-header {
+    margin-bottom: 60px;
+  }
+
+  .magadh-journey-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .magadh-journey-header h2 {
+    font-size: 43px;
+
+    line-height: 1.08;
+  }
+
+  .magadh-journey-intro {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .magadh-journey-question {
+    font-size: 15px;
+  }
+
+  .magadh-journey-path {
+    left: 18px;
+
+    transform: none;
+  }
+
+  .magadh-journey-path-glow {
+    left: 18px;
+
+    transform:
+      translateX(-50%);
+
+    filter: blur(3px);
+  }
+
+  .magadh-journey-path-light {
+    left: 18px;
+
+    width: 7px;
+
+    height: 110px;
+
+    filter:
+      drop-shadow(
+        0 0 6px rgba(255, 245, 205, 0.9)
+      )
+      drop-shadow(
+        0 0 14px rgba(255, 226, 126, 0.65)
+      );
+  }
+
+  .magadh-journey-step,
+  .magadh-journey-step-left,
+  .magadh-journey-step-right {
+    width: 100%;
+
+    margin: 0;
+
+    min-height: auto;
+
+    display: block;
+
+    padding:
+      34px 0 38px 60px;
+
+    text-align: left;
+  }
+
+  .magadh-journey-step-left
+  .magadh-journey-marker,
+  .magadh-journey-step-right
+  .magadh-journey-marker {
+    left: -3px;
+
+    right: auto;
+
+    top: 42px;
+  }
+
+  .magadh-journey-content {
+    max-width: none;
+  }
+
+  .magadh-journey-content h3 {
+    font-size: 28px;
+
+    animation: none;
+
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 1),
+      0 5px 10px rgba(0, 0, 0, 1),
+      0 9px 20px rgba(0, 0, 0, 0.95),
+      0 0 6px rgba(255, 250, 225, 0.40),
+      0 0 14px rgba(255, 226, 130, 0.25);
+  }
+
+  .magadh-journey-content h4 {
+    font-size: 13px;
+
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 1),
+      0 5px 10px rgba(0, 0, 0, 1),
+      0 9px 18px rgba(0, 0, 0, 0.95),
+      0 0 7px rgba(255, 239, 170, 0.55),
+      0 0 15px rgba(244, 201, 79, 0.32);
+  }
+
+  .magadh-journey-description {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 1),
+      0 5px 10px rgba(0, 0, 0, 1),
+      0 9px 18px rgba(0, 0, 0, 0.95),
+      0 0 5px rgba(255, 255, 255, 0.18);
+  }
+
+  .magadh-journey-content li {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.90);
+
+    text-shadow:
+      0 2px 4px rgba(0, 0, 0, 1),
+      0 5px 10px rgba(0, 0, 0, 1),
+      0 9px 18px rgba(0, 0, 0, 0.90),
+      0 0 4px rgba(255, 255, 255, 0.16);
+  }
+
+  .magadh-journey-step-left
+  .magadh-journey-content li {
+    justify-content: flex-start;
+  }
+
+  .magadh-journey-ending {
+    font-size: 13px;
+
+    text-shadow:
+      0 2px 5px rgba(0, 0, 0, 1),
+      0 5px 12px rgba(0, 0, 0, 0.95),
+      0 9px 22px rgba(0, 0, 0, 0.80),
+      0 0 7px rgba(255, 235, 175, 0.30);
+  }
+
+  .magadh-journey-final {
+    min-height: auto;
+  }
+
+  .magadh-journey-final
+  .magadh-journey-content h3 {
+    font-size: 31px;
+  }
+
+  .magadh-journey-qr {
+    gap: 12px;
+
+    padding: 13px;
+  }
+
+  .magadh-journey-qr-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .magadh-journey-qr strong {
+    font-size: 10px;
+  }
+
+  .magadh-journey-qr span {
+    font-size: 9px;
+  }
+
+  .magadh-journey-quote {
+    font-size: 12px;
+  }
+
+  .magadh-journey-transparency span {
+    font-size: 9px;
+  }
+
+  .magadh-journey-transparency p {
+    font-size: 10px;
+  }
+
+
+  /* =======================================================
+     BENEFITS
+  ======================================================= */
+
+  .benefits {
+    grid-template-columns: 1fr 1fr;
+
+    padding:
+      20px 10px;
+  }
+
+
+  /* =======================================================
+     ADMIN MOBILE
+  ======================================================= */
+
+  .admin-panel-button {
+    width: 115px;
+
+    min-height: 43px;
+
+    top: 13px;
+    right: 7px;
+
+    padding:
+      5px 8px;
+
+    border-radius: 12px;
+  }
+
+  .admin-panel-icon {
+    width: 28px;
+    height: 28px;
+
+    border-radius: 8px;
+  }
+
+  .admin-panel-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .admin-panel-text {
+    margin-left: 6px;
+  }
+
+  .admin-panel-text strong {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .admin-panel-text small {
+    display: none;
+  }
+
+  .admin-panel-arrow {
+    margin-left: 4px;
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   500px
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    height: 66px;
+
+    padding:
+      0 12px;
+  }
+
+  .brand-symbol {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-leaf-logo {
+    width: 21px;
+    height: 21px;
+  }
+
+  .brand-name {
+    font-size: 13px;
+
+    letter-spacing: 1.7px;
+  }
+
+  .nav-actions {
+    gap: 6px;
+
+    padding-right: 34px;
+  }
+
+  .user-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .user-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  /*
+    MOBILE TOP NAV FIX
+  */
+
+  .mobile-nav-links {
+    top: 66px;
+
+    padding:
+      6px 10px;
+
+    gap: 4px;
+  }
+
+  .mobile-nav-item {
+    height: 29px;
+
+    padding:
+      0 10px;
+
+    font-size: 8.5px;
+  }
+
+  .account-dropdown {
+    top: 43px;
+
+    right: -2px;
+
+    width: 180px;
+  }
+
+  /*
+    Cart remains functional but does not cover navbar.
+  */
+
+  .cart {
+    top: 16px;
+
+    right: 10px;
+
+    font-size: 24px;
+  }
+
+  .cart span {
+    top: -6px;
+    right: -6px;
+  }
+
+  /*
+    Hero
+  */
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-content {
+    padding:
+      145px 16px 0;
+  }
+
+  .eyebrow {
+    font-size: 7px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .primary,
+  .secondary {
+    height: 44px;
+
+    padding:
+      0 13px;
+
+    font-size: 9px;
+  }
+
+  .hero-features {
+    gap: 10px;
+
+    margin-top: 30px;
+  }
+
+  .hero-feature {
+    flex-direction: column;
+
+    gap: 4px;
+
+    text-align: center;
+  }
+
+  .feature-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 23px;
+  }
+
+  .hero-feature b {
+    font-size: 8px;
+  }
+
+  .hero-feature small {
+    font-size: 7px;
+  }
+
+  /*
+    Bottle stays completely hidden.
+  */
+
+  .product-area,
+  .product,
+  .product-glow {
+    display: none !important;
+  }
+
+  .family-image-area {
+    left: 2%;
+
+    bottom: 0;
+
+    width: 96%;
+
+    height: 275px;
+  }
+
+  .family-image {
+    width: 115%;
+
+    left: -7.5%;
+  }
+
+
+  /* =======================================================
+     JOURNEY
+  ======================================================= */
+
+  .magadh-journey {
+    padding:
+      70px 18px 85px;
+  }
+
+  .magadh-journey-header {
+    margin-bottom: 45px;
+  }
+
+  .magadh-journey-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+  .magadh-journey-header h2 {
+    margin-top: 14px;
+
+    font-size: 35px;
+  }
+
+  .magadh-journey-intro {
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+  .magadh-journey-question {
+    margin-top: 18px;
+
+    font-size: 14px;
+  }
+
+  .magadh-journey-path {
+    left: 14px;
+  }
+
+  .magadh-journey-path-glow {
+    left: 14px;
+  }
+
+  .magadh-journey-path-light {
+    left: 14px;
+
+    width: 6px;
+
+    height: 100px;
+  }
+
+  .magadh-journey-step,
+  .magadh-journey-step-left,
+  .magadh-journey-step-right {
+    padding:
+      30px 0 32px 47px;
+  }
+
+  .magadh-journey-step-left
+  .magadh-journey-marker,
+  .magadh-journey-step-right
+  .magadh-journey-marker {
+    left: -5px;
+
+    top: 40px;
+  }
+
+  .magadh-journey-marker {
+    width: 38px;
+    height: 38px;
+
+    font-size: 9px;
+  }
+
+  .magadh-journey-step-label {
+    min-width: 68px;
+
+    height: 25px;
+
+    font-size: 8px;
+  }
+
+  .magadh-journey-content h3 {
+    margin-top: 14px;
+
+    font-size: 24px;
+
+    animation: none;
+  }
+
+  .magadh-journey-content h4 {
+    font-size: 11px;
+  }
+
+  .magadh-journey-description {
+    margin-top: 14px;
+
+    font-size: 12px;
+
+    line-height: 1.75;
+  }
+
+  .magadh-journey-content ul {
+    margin-top: 17px;
+
+    gap: 8px;
+  }
+
+  .magadh-journey-content li {
+    font-size: 11px;
+
+    line-height: 1.55;
+  }
+
+  .magadh-journey-ending {
+    margin-top: 19px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+  .magadh-journey-final
+  .magadh-journey-content h3 {
+    font-size: 27px;
+  }
+
+  .magadh-journey-qr {
+    gap: 12px;
+
+    padding: 13px;
+  }
+
+  .magadh-journey-qr-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .magadh-journey-qr strong {
+    font-size: 10px;
+  }
+
+  .magadh-journey-qr span {
+    font-size: 9px;
+  }
+
+  .magadh-journey-quote {
+    font-size: 12px;
+  }
+
+  .magadh-journey-transparency span {
+    font-size: 9px;
+  }
+
+  .magadh-journey-transparency p {
+    font-size: 10px;
+  }
+
+
+  /* =======================================================
+     BRAND MESSAGE
+  ======================================================= */
+
+  .benefits {
+    padding:
+      38px 16px 48px;
+  }
+
+  .benefit-main {
+    font-size: 17px;
+  }
+
+  .benefit-brand {
+    font-size: 22px;
+  }
+
+  .benefit-product {
+    font-size: 15px;
+  }
+
+  .benefit-line {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+  .benefit-family {
+    font-size: 15px;
+  }
+
+  .benefit-ending {
+    font-size: 12px;
+  }
+
+
+  /* =======================================================
+     ADMIN SMALL MOBILE
+  ======================================================= */
+
+  .admin-panel-button {
+    width: 104px;
+
+    min-height: 39px;
+
+    top: 10px;
+    right: 5px;
+
+    padding:
+      4px 6px;
+
+    border-radius: 10px;
+  }
+
+  .admin-panel-icon {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 7px;
+  }
+
+  .admin-panel-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .admin-panel-text {
+    margin-left: 5px;
+  }
+
+  .admin-panel-text strong {
+    font-size: 6.5px;
+
+    letter-spacing: 0.3px;
+  }
+
+  .admin-panel-arrow {
+    margin-left: 3px;
+
+    font-size: 13px;
+  }
+
+
+  /* =======================================================
+     FOOTER
+  ======================================================= */
+
+  footer {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(34, 20, 7, 0.98),
+        rgba(10, 5, 2, 1)
+      ) !important;
+
+    flex-wrap: wrap;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+   PERFORMANCE / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero::before,
+  .product,
+  .product-glow {
+    animation: none !important;
+  }
+
+  .typing-cursor,
+  .magadh-journey-content h3,
+  .account-dropdown,
+  .benefit-message .benefit-main,
+  .benefit-message .benefit-brand,
+  .benefit-message .benefit-product,
+  .benefit-message .benefit-line,
+  .benefit-message .benefit-family,
+  .benefit-message .benefit-ending {
+    animation: none !important;
+  }
+
+  .primary,
+  .secondary,
+  .nav-links a,
+  .mobile-nav-item,
+  .user-icon,
+  .cart,
+  .brand-symbol,
+  .account-dropdown button,
+  .admin-panel-button,
+  .admin-panel-icon,
+  .admin-panel-arrow {
+    transition: none !important;
+  }
+
+  .admin-panel-button::before {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   MOBILE PERFORMANCE OVERRIDES
+========================================================= */
+
+@media (max-width: 800px) {
+
+  /*
+    Expensive blur reduced on touch devices.
+  */
+
+  .hero-feature b::after {
+    filter: blur(3px);
+  }
+
+  .magadh-journey-path-glow {
+    filter: blur(2px);
+  }
+
+  /*
+    Prevent hover-style transforms from fighting
+    touch scrolling.
+  */
+
+  .primary:hover,
+  .secondary:hover,
+  .brand-symbol:hover,
+  .user-icon:hover,
+  .cart:hover,
+  .account-dropdown button:hover,
+  .admin-panel-button:hover,
+  .admin-panel-button:hover .admin-panel-icon,
+  .admin-panel-button:hover .admin-panel-arrow {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE SAFETY
+========================================================= */
+
+@media (max-width: 800px) {
+
+  body {
+    overscroll-behavior-x: none;
+  }
+
+  .magadh-home,
+  .hero,
+  .magadh-journey {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}

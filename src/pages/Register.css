@@ -1,0 +1,532 @@
+.register-page {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(181, 137, 46, 0.12),
+      transparent 32%
+    ),
+    #080704;
+  color: #f7f0df;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.register-background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(197, 154, 60, 0.025),
+      transparent 35%,
+      rgba(197, 154, 60, 0.018)
+    );
+}
+
+.register-navbar {
+  height: 86px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid rgba(196, 155, 69, 0.18);
+  background: rgba(8, 7, 4, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.register-brand {
+  border: none;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.register-brand-symbol {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 171, 74, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e1b951;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow:
+    0 0 20px rgba(211, 164, 54, 0.08);
+}
+
+.register-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.register-brand-text strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #e4bd5d;
+}
+
+.register-brand-text small {
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: rgba(235, 224, 199, 0.45);
+}
+
+.register-home-button {
+  border: 1px solid rgba(204, 161, 63, 0.28);
+  border-radius: 9px;
+  padding: 11px 22px;
+  background: rgba(255, 255, 255, 0.025);
+  color: rgba(250, 243, 227, 0.78);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.register-home-button:hover {
+  color: #e8c667;
+  border-color: rgba(215, 170, 70, 0.65);
+  background: rgba(214, 169, 67, 0.06);
+}
+
+.register-wrapper {
+  min-height: calc(100vh - 86px);
+  padding: 60px 20px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.register-card {
+  width: min(760px, 100%);
+  border: 1px solid rgba(202, 159, 65, 0.23);
+  border-radius: 24px;
+  padding: 46px 48px 38px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 20, 10, 0.96),
+      rgba(13, 10, 6, 0.98)
+    );
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.register-card-header {
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto 34px;
+}
+
+.register-kicker {
+  display: block;
+  margin-bottom: 12px;
+  color: #cda74d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.register-card-header h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 46px);
+  line-height: 1.05;
+  font-weight: 500;
+  color: #f6efdf;
+}
+
+.register-card-header p {
+  margin: 16px auto 0;
+  max-width: 540px;
+  color: rgba(239, 229, 207, 0.58);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.register-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 18px;
+}
+
+.register-field {
+  min-width: 0;
+}
+
+.register-full {
+  grid-column: 1 / -1;
+}
+
+.register-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: rgba(247, 238, 218, 0.82);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.register-field label > span:first-of-type {
+  color: #d5aa4c;
+  margin-left: 4px;
+}
+
+.register-field input[type="text"],
+.register-field input[type="email"],
+.register-field input[type="password"],
+.register-field input[type="tel"] {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid rgba(201, 158, 66, 0.18);
+  border-radius: 10px;
+  outline: none;
+  padding: 0 15px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #f6efdf;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.register-field input::placeholder {
+  color: rgba(236, 226, 204, 0.28);
+}
+
+.register-field input:focus {
+  border-color: rgba(216, 174, 78, 0.75);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 0 0 3px rgba(205, 161, 62, 0.07);
+}
+
+.register-phone-input {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(201, 158, 66, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.register-phone-input:focus-within {
+  border-color: rgba(216, 174, 78, 0.75);
+  box-shadow:
+    0 0 0 3px rgba(205, 161, 62, 0.07);
+}
+
+.register-phone-input > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-right: 1px solid rgba(201, 158, 66, 0.15);
+  color: #d9b456;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.register-phone-input input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-left: 13px !important;
+}
+
+.register-gender-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.register-gender-option {
+  position: relative;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid rgba(201, 158, 66, 0.17);
+  border-radius: 10px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 !important;
+  cursor: pointer;
+  color: rgba(244, 235, 216, 0.68) !important;
+  background: rgba(255, 255, 255, 0.025);
+  transition: 0.25s ease;
+}
+
+.register-gender-option:hover {
+  border-color: rgba(211, 166, 68, 0.4);
+}
+
+.register-gender-option.selected {
+  border-color: rgba(216, 174, 78, 0.72);
+  color: #e4bf61 !important;
+  background: rgba(207, 161, 62, 0.07);
+}
+
+.register-gender-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.register-radio {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(224, 185, 92, 0.55);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.register-gender-option.selected .register-radio {
+  border-color: #d9b351;
+}
+
+.register-gender-option.selected .register-radio::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #dcb65a;
+}
+
+.register-message {
+  grid-column: 1 / -1;
+  border-radius: 9px;
+  padding: 12px 14px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.register-error {
+  border: 1px solid rgba(203, 78, 64, 0.28);
+  background: rgba(145, 43, 31, 0.09);
+  color: #e9aaa0;
+}
+
+.register-success {
+  border: 1px solid rgba(105, 167, 105, 0.28);
+  background: rgba(55, 120, 55, 0.09);
+  color: #a9d5a9;
+}
+
+.register-submit {
+  grid-column: 1 / -1;
+  height: 55px;
+  margin-top: 4px;
+  border: 1px solid rgba(219, 177, 77, 0.72);
+  border-radius: 10px;
+  background:
+    linear-gradient(
+      135deg,
+      #b88b32,
+      #d8b35a
+    );
+  color: #171106;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  transition: 0.25s ease;
+  box-shadow:
+    0 12px 30px rgba(190, 142, 45, 0.12);
+}
+
+.register-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 35px rgba(190, 142, 45, 0.2);
+}
+
+.register-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.register-submit span {
+  font-size: 18px;
+}
+
+.register-spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(23, 17, 6, 0.3);
+  border-top-color: #171106;
+  border-radius: 50%;
+  animation: registerSpin 0.75s linear infinite;
+}
+
+@keyframes registerSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.register-security {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: -2px;
+}
+
+.register-security > span {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d7b357;
+  border: 1px solid rgba(215, 179, 87, 0.35);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.register-security p {
+  margin: 0;
+  color: rgba(238, 227, 204, 0.38);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.register-login {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(201, 158, 66, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: rgba(239, 229, 207, 0.48);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.register-login button {
+  border: none;
+  background: transparent;
+  color: #d8b354;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.register-login button:hover {
+  color: #f0d17a;
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .register-navbar {
+    height: 74px;
+    padding: 0 20px;
+  }
+
+  .register-brand-symbol {
+    width: 39px;
+    height: 39px;
+    font-size: 19px;
+  }
+
+  .register-brand-text strong {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .register-brand-text small {
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+
+  .register-home-button {
+    padding: 9px 15px;
+  }
+
+  .register-wrapper {
+    min-height: calc(100vh - 74px);
+    padding: 28px 14px 50px;
+  }
+
+  .register-card {
+    padding: 32px 20px 28px;
+    border-radius: 18px;
+  }
+
+  .register-card-header h1 {
+    font-size: 32px;
+  }
+
+  .register-card-header p {
+    font-size: 12px;
+  }
+
+  .register-form {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .register-full {
+    grid-column: auto;
+  }
+
+  .register-gender-options {
+    grid-template-columns: 1fr;
+  }
+
+  .register-message,
+  .register-submit,
+  .register-security {
+    grid-column: auto;
+  }
+
+  .register-login {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
